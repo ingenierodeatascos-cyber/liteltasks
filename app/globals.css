@@ -202,3 +202,70 @@ a {
   border: 1px solid var(--border);
   color: var(--text);
 }
+
+.dashboard {
+  display: grid;
+  gap: 24px;
+}
+
+.dashboardHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(255, 250, 242, 0.96), rgba(240, 227, 207, 0.9));
+  box-shadow: 0 24px 60px rgba(80, 52, 25, 0.08);
+}
+
+.dashboardTitle {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.05;
+}
+
+.dashboardLead {
+  max-width: 60ch;
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+
+.dashboardGrid {
+  display: grid;
+  gap: 20px;
+}
+
+@media (min-width: 900px) {
+  .dashboardGrid {
+    grid-template-columns: minmax(280px, 340px) minmax(0, 1fr);
+  }
+}
+
+.dashboardPanel {
+  display: grid;
+  gap: 12px;
+}
+
+.dashboardPanel p {
+  margin: 0;
+}
+
+.tasksEmptyState {
+  display: grid;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+.tasksEmptyState h3 {
+  margin: 0;
+}
+
+.tasksEmptyState p {
+  margin: 0;
+  color: var(--muted);
+}

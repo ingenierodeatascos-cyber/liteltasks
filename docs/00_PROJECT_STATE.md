@@ -68,6 +68,9 @@ En aquest moment:
 - base mínima de sessió amb cookie signada
 - tests mínims de validació del registre
 - tests mínims de registre i login
+- protecció de rutes privades del dashboard
+- logout funcional
+- dashboard privat base amb UI mínima
 
 ### ja definit
 - visió general del producte
@@ -78,11 +81,10 @@ En aquest moment:
 - focus del sprint actual
 
 ### pendent d’implementar
-- protecció de rutes privades
-- logout
-- dashboard privat real
+
 - CRUD bàsic de tasques
 - refinament funcional del MVP
+- connectar el dashboard a dades reals de tasques, si vols fer-ho explícit
 
 ---
 
@@ -129,7 +131,8 @@ No formen part del MVP actual:
 - sistema basat en sessió
 - registre i login amb Server Actions
 - sessió mínima basada en cookie signada
-- protecció de rutes encara pendent
+- dashboard protegit
+- logout funcional
 
 ### testing
 - validació manual del flux principal
@@ -183,10 +186,13 @@ Tasks completades en aquest sprint:
 - TASK-005 — crear validació d’input per al registre
 - TASK-006 — implementar registre d’usuari
 - TASK-007 — implementar login
+- TASK-008 — protegir les rutes privades
+- TASK-009 — implementar logout
+- TASK-010 — crear la UI bàsica del dashboard
 
 Task actual:
 
-- TASK-008 — protegir les rutes privades
+- sprint pendent d’actualitzar per definir el següent increment funcional
 ---
 
 ## restriccions actuals
@@ -226,7 +232,7 @@ Aquesta fase es considerarà ben completada quan:
 
 ## següent pas correcte
 
-Executar `TASK-008 — protegir les rutes privades` respectant:
+Tancar el sprint actual i definir el següent increment funcional del mòdul de tasques respectant:
 
 - `docs/01_SPEC.md`
 - `docs/02_ARCHITECTURE.md`
@@ -234,5 +240,6 @@ Executar `TASK-008 — protegir les rutes privades` respectant:
 - `docs/06_CURRENT_SPRINT.md`
 
 Després, continuar amb:
-- TASK-009
-- TASK-010
+- formulari funcional de creació de tasques
+- llistat real de tasques
+- connexió del dashboard a dades reals

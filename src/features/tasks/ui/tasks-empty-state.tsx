@@ -1,10 +1,10 @@
 export function TasksEmptyState() {
   return (
-    <section className="card">
-      <h2>Espai reservat per a tasques</h2>
+    <section className="tasksEmptyState">
+      <h3>Task list placeholder</h3>
       <p>
-        La UI funcional de tasques encara no forma part d&apos;aquesta task. Aquesta peça només
-        deixa preparat el punt d&apos;entrada del mòdul.
+        The functional task list is not implemented yet. This section keeps the
+        layout ready for the upcoming task management flow.
       </p>
     </section>
   );
