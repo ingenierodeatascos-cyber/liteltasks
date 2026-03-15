@@ -44,11 +44,12 @@ in-progress
 - TASK-002 — configurar Prisma i SQLite
 - TASK-003 — definir el model User
 - TASK-004 — definir el model Task
+- TASK-005 — crear validació d’input per al registre
 ---
 
 ## task actual
 
-TASK-005 — crear validació d’input per al registre
+- TASK-006 — implementar registre d’usuari
 
 
 

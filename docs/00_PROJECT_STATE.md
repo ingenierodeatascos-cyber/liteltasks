@@ -61,6 +61,8 @@ En aquest moment:
 - sistema de migracions inicial
 - model User definit
 - model Task definit amb relació a User
+- validació bàsica d’input per al registre
+- tests mínims de validació del registre
 
 ### ja definit
 - visió general del producte
@@ -71,11 +73,11 @@ En aquest moment:
 - focus del sprint actual
 
 ### pendent d’implementar
-- base real de l’aplicació
+- lògica real de registre d’usuari
+- persistència del registre a base de dades
 - autenticació
 - dashboard privat
 - CRUD bàsic de tasques
-- tests mínims
 - refinament funcional del MVP
 
 ---

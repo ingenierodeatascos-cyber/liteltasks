@@ -180,3 +180,61 @@ A més del producte LiteTasks, aquest repositori serveix per aprendre:
 - gestió de context
 - arquitectura incremental
 - workflow professional amb IA
+
+---
+
+## 11. Estat actual del desenvolupament
+
+Base tècnica del projecte ja preparada.
+
+Components ja implementats:
+
+- estructura base Next.js
+- configuració Prisma
+- base de dades SQLite
+- model `User`
+- model `Task`
+- migracions inicials
+
+La implementació funcional del producte encara no està completa.
+
+La task activa es defineix a:
+
+docs/06_CURRENT_SPRINT.md
+
+---
+
+## 12. Límits d'intervenció de la IA
+
+Quan una IA treballi en aquest repositori no ha de:
+
+- modificar l'estructura del projecte
+- modificar l'arquitectura sense una decisió documentada
+- modificar documents fora de la task
+- afegir dependències noves sense justificació
+- refactoritzar grans parts del sistema
+
+Només s'han de modificar els fitxers estrictament necessaris per completar la task actual.
+
+---
+
+## 13. Fonts de veritat del projecte
+
+Cada tipus d'informació té un document de referència:
+
+Producte:
+docs/01_SPEC.md
+
+Arquitectura:
+docs/02_ARCHITECTURE.md
+
+Backlog de tasks:
+docs/03_TASKS.md
+
+Sprint actual:
+docs/06_CURRENT_SPRINT.md
+
+Estat global del projecte:
+docs/00_PROJECT_STATE.md
+
+Si hi ha contradiccions, aquests documents prevalen sobre qualsevol altre context.
