@@ -1,114 +1,184 @@
 # ARCHITECTURE
 
-## stack tecnològic
+## objectiu de l’arquitectura
 
-frontend:
-No cal un frontend específic en el MVP. La interfície principal és textual i basada en fitxers Markdown dins del repositori.
+Definir una arquitectura mínima, clara i educativa per construir el MVP de LiteTasks com una aplicació SaaS simple de control de tasques.
 
-backend:
-Orquestrador documental i sistema d’agents executats sobre Codex, amb lògica de workflow guiada per prompts i fitxers d’estat.
+Aquesta arquitectura ha de complir quatre objectius:
 
-database:
-No és necessària una base de dades en aquesta fase. La font de veritat és el sistema de fitxers del repositori.
+- ser fàcil d’entendre per a un estudiant
+- permetre construir un MVP real sense complexitat innecessària
+- facilitar el treball assistit amb IA amb context clar i controlat
+- deixar una base preparada per créixer en el futur
 
-testing:
-Validació manual del workflow i comprovació de consistència entre documents, prompts i outputs estructurats.
+LiteTasks és el producte principal.  
+El sistema d’agents, prompts i documents és el mètode de treball per construir-lo de forma ordenada.
 
 ---
 
-## components
+## stack tecnològic
 
-Orchestrator  
-Selecciona l’agent correcte i controla el flux del procés.
+### frontend
+Aplicació web amb interfície simple per a l’usuari.
 
-Agents  
-Explorer, Spec Writer, Architect, Planner, Implementer, Reviewer i Archivist.
+Tecnologies previstes:
+- Next.js
+- React
+- TypeScript
 
-Prompt Runner  
-Prompts que defineixen com executar cada agent.
+### backend
+Lògica de servidor integrada dins la mateixa aplicació.
 
-State Documents  
-Documents que representen l'estat del projecte i del workflow.
+Tecnologies previstes:
+- Next.js Route Handlers o Server Actions
+- TypeScript
+
+### database
+Persistència relacional simple per al MVP.
+
+Tecnologies previstes:
+- Prisma ORM
+- SQLite en desenvolupament local
+
+### authentication
+Sistema d’autenticació per protegir l’accés a les dades de cada usuari.
+
+Opcions compatibles:
+- Auth.js / NextAuth
+- o implementació equivalent simple segons el stack final
+
+### testing
+Validació mínima del comportament principal del sistema.
+
+Estratègia prevista:
+- testing manual del flux principal
+- tests bàsics de validació i lògica crítica
+
+---
+
+## principis d’arquitectura
+
+- començar simple
+- evitar abstraccions prematures
+- separar producte i sistema de treball
+- dividir el desenvolupament en increments petits
+- documentar decisions importants
+- prioritzar claredat sobre sofisticació
+- fer que la IA treballi amb context mínim però suficient
+
+---
+
+## components principals del sistema
+
+### 1. web app
+És l’aplicació principal que utilitza l’usuari final.
+
+Responsabilitats:
+- mostrar les pantalles de registre, login i dashboard
+- recollir les accions de l’usuari
+- mostrar llistat de tasques
+- mostrar errors i estats bàsics
+
+No fa:
+- no decideix regles de negoci complexes
+- no accedeix directament a dades sense passar per la lògica de servidor
+
+### 2. auth module
+Gestiona la identificació de l’usuari.
+
+Responsabilitats:
+- registre
+- login
+- logout
+- protecció de rutes privades
+- associació entre usuari autenticat i dades pròpies
+
+No fa:
+- no gestiona dades de tasques directament
+- no substitueix la validació de permisos de negoci
+
+### 3. tasks module
+És la feature principal del MVP.
+
+Responsabilitats:
+- crear tasques
+- llistar tasques de l’usuari
+- canviar estat pendent/completada
+- eliminar tasques
+
+No fa:
+- no gestiona altres dominis
+- no implementa encara etiquetes, prioritats o col·laboració
+
+### 4. database layer
+Capa de persistència del sistema.
+
+Responsabilitats:
+- guardar usuaris
+- guardar tasques
+- mantenir relació User → Task
+- assegurar coherència bàsica de dades
+
+No fa:
+- no conté lògica d’interfície
+- no decideix el flux d’usuari
+
+### 5. workflow documental AI-first
+Sistema intern de treball del projecte.
+
+Responsabilitats:
+- mantenir documentació viva
+- definir especificació
+- desglossar tasques
+- registrar decisions
+- coordinar el treball assistit amb IA
+
+Components inclosos:
+- Orchestrator
+- Agents
+- Prompts
+- State Documents
+
+No és el producte final:
+- serveix per construir millor LiteTasks
+- no substitueix l’aplicació SaaS
 
 ---
 
 ## estructura del repositori
 
-agents/  
-Definició dels agents i els seus contractes.
-
-prompts/  
-Prompts d'execució per cada agent.
-
-docs/  
-Documents d'estat i artefactes del workflow.
-
-memory/  
-Informació persistent del sistema.
-
-skills/  
-Registre d'habilitats disponibles.
-
-src/  
-Codi d'aplicació futur.
-
-tests/  
-Tests del sistema.
-
----
-
-## flux de dades
-
-Usuari  
-↓  
-Orchestrator  
-↓  
-Agent seleccionat  
-↓  
-Documents d’estat i context  
-↓  
-Output estructurat en Markdown  
-↓  
-Següent agent del workflow
-
----
-
-## models principals
-
-ProjectState  
-Conté objectiu del projecte, estat actual, components implementats, components pendents, stack i objectiu següent.
-
-CurrentSprint  
-Conté objectiu del sprint, tasca actual, estat, fitxers tocables, criteris de completat, bloquejos i següent pas.
-
-AgentDefinition  
-Defineix rol, objectiu, inputs permesos, regles i format de sortida de cada agent.
-
-PromptDefinition  
-Defineix com s’executa cada agent amb context mínim i amb quins documents ha de treballar.
-
-ArtifactDocument  
-Representa els lliurables del workflow: exploration, spec, architecture, tasks, decisions i testing.
-
----
-
-## decisions tècniques
-
-- El sistema utilitza Markdown com a format base per mantenir simplicitat i traçabilitat.
-- L'estat del sistema es manté en documents dins del repositori.
-- El workflow es construeix primer com un procés seqüencial d’agents.
-- No es fa servir base de dades en el MVP.
-
----
-
-## riscos tècnics
-
-- El sistema pot quedar només com una plantilla documental si no es defineix bé el comportament del router.
-- Sense contractes d’output clars, els agents poden generar documents inconsistents.
-- Si els documents deixen de reflectir l’estat real, es pot produir desalineació del sistema.
-
----
-
-## següent pas
-
-Crear pla d'implementació amb el Planner Agent.
+```text
+liteltasks/
+├── app/
+│   ├── login/
+│   ├── register/
+│   ├── dashboard/
+│   ├── api/
+│   └── layout.tsx
+├── src/
+│   ├── features/
+│   │   ├── auth/
+│   │   └── tasks/
+│   ├── lib/
+│   ├── db/
+│   └── validations/
+├── prisma/
+│   ├── schema.prisma
+│   └── migrations/
+├── tests/
+├── docs/
+│   ├── 00_PROJECT_STATE.md
+│   ├── 01_SPEC.md
+│   ├── 02_ARCHITECTURE.md
+│   ├── 03_TASKS.md
+│   ├── 04_DECISIONS.md
+│   ├── 05_TESTING.md
+│   ├── 06_CURRENT_SPRINT.md
+│   └── 07_CONTEXT_RULES.md
+├── agents/
+├── prompts/
+├── contracts/
+├── skills/
+├── AGENTS.md
+├── ORCHESTRATOR.md
+└── README.md
