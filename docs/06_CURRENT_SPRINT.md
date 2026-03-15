@@ -30,9 +30,9 @@ in-progress
 
 ## tasks actives del sprint
 
-- TASK-005 — crear validació d’input per al registre
-- TASK-006 — implementar registre d’usuari
-- TASK-007 — implementar login
+- TASK-008 — protegir les rutes privades
+- TASK-009 — implementar logout
+- TASK-010 — crear la UI bàsica del dashboard
 
 
 
@@ -46,11 +46,12 @@ in-progress
 - TASK-004 — definir el model Task
 - TASK-005 — crear validació d’input per al registre
 - TASK-006 — implementar registre d’usuari
+- TASK-007 — implementar login
 ---
 
 ## task actual
 
-- TASK-007 — implementar login
+- TASK-008 — protegir les rutes privades
 
 
 

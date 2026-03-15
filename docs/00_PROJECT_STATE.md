@@ -62,7 +62,12 @@ En aquest moment:
 - model User definit
 - model Task definit amb relació a User
 - validació bàsica d’input per al registre
+- registre d’usuari funcional
+- login funcional
+- hash de contrasenyes
+- base mínima de sessió amb cookie signada
 - tests mínims de validació del registre
+- tests mínims de registre i login
 
 ### ja definit
 - visió general del producte
@@ -73,10 +78,9 @@ En aquest moment:
 - focus del sprint actual
 
 ### pendent d’implementar
-- lògica real de registre d’usuari
-- persistència del registre a base de dades
-- autenticació
-- dashboard privat
+- protecció de rutes privades
+- logout
+- dashboard privat real
 - CRUD bàsic de tasques
 - refinament funcional del MVP
 
@@ -123,7 +127,9 @@ No formen part del MVP actual:
 
 ### autenticació
 - sistema basat en sessió
-- solució concreta pendent d’implementar
+- registre i login amb Server Actions
+- sessió mínima basada en cookie signada
+- protecció de rutes encara pendent
 
 ### testing
 - validació manual del flux principal
@@ -165,19 +171,22 @@ No formen part del MVP actual:
 El sprint actual està orientat a deixar preparada la base tècnica del projecte.
 
 Tasks actives:
-- TASK-005 — crear validació d’input per al registre
-- TASK-006 — implementar registre d’usuari
-- TASK-007 — implementar login
+- TASK-008 — protegir les rutes privades
+- TASK-009 — implementar logout
+- TASK-010 — crear la UI bàsica del dashboard
 
-Tasks completades sprint anterior sprint:
+Tasks completades en aquest sprint:
 - TASK-001 — inicialitzar l’aplicació base
 - TASK-002 — configurar Prisma i SQLite
 - TASK-003 — definir el model User
 - TASK-004 — definir el model Task
+- TASK-005 — crear validació d’input per al registre
+- TASK-006 — implementar registre d’usuari
+- TASK-007 — implementar login
 
 Task actual:
 
-TASK-005 — crear validació d’input per al registre
+- TASK-008 — protegir les rutes privades
 ---
 
 ## restriccions actuals
@@ -217,7 +226,7 @@ Aquesta fase es considerarà ben completada quan:
 
 ## següent pas correcte
 
-Executar `TASK-004 — definir el model Task` respectant:
+Executar `TASK-008 — protegir les rutes privades` respectant:
 
 - `docs/01_SPEC.md`
 - `docs/02_ARCHITECTURE.md`
@@ -225,6 +234,5 @@ Executar `TASK-004 — definir el model Task` respectant:
 - `docs/06_CURRENT_SPRINT.md`
 
 Després, continuar amb:
-- TASK-008
 - TASK-009
 - TASK-010
