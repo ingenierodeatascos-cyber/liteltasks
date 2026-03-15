@@ -35,14 +35,14 @@ El sistema d’agents, prompts i documents és el mètode de treball per constru
 
 ## fase actual
 
-Fase de preparació de la base tècnica del MVP.
+Fase final de preparació de la base tècnica del MVP.
 
 En aquest moment:
 - la idea del producte està definida
 - l’arquitectura inicial està definida
 - el backlog inicial de tasks està definit
 - el sprint actual està centrat en preparar la base tècnica
-- la implementació funcional del producte encara no ha començat o està just començant
+- la base tècnica del producte ja està preparada i el següent pas és començar la implementació funcional
 
 ---
 
@@ -163,14 +163,19 @@ No formen part del MVP actual:
 El sprint actual està orientat a deixar preparada la base tècnica del projecte.
 
 Tasks actives:
+- TASK-005 — crear validació d’input per al registre
+- TASK-006 — implementar registre d’usuari
+- TASK-007 — implementar login
+
+Tasks completades sprint anterior sprint:
 - TASK-001 — inicialitzar l’aplicació base
 - TASK-002 — configurar Prisma i SQLite
 - TASK-003 — definir el model User
 - TASK-004 — definir el model Task
 
 Task actual:
-- TASK-004 — definir el model Task
 
+TASK-005 — crear validació d’input per al registre
 ---
 
 ## restriccions actuals
@@ -218,6 +223,6 @@ Executar `TASK-004 — definir el model Task` respectant:
 - `docs/06_CURRENT_SPRINT.md`
 
 Després, continuar amb:
-- TASK-005
-- TASK-006
-- TASK-007
+- TASK-008
+- TASK-009
+- TASK-010

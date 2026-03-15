@@ -30,23 +30,27 @@ in-progress
 
 ## tasks actives del sprint
 
+- TASK-005 — crear validació d’input per al registre
+- TASK-006 — implementar registre d’usuari
+- TASK-007 — implementar login
+
+
+
+---
+
+## tasks completades en sprint
+
 - TASK-001 — inicialitzar l’aplicació base
 - TASK-002 — configurar Prisma i SQLite
 - TASK-003 — definir el model User
 - TASK-004 — definir el model Task
-
----
-
-## tasks completades en aquest sprint
-
-- TASK-001 — inicialitzar l’aplicació base
-- TASK-002 — configurar Prisma i SQLite
-- TASK-003 — definir el model User
 ---
 
 ## task actual
 
-- TASK-004 — definir el model Task
+TASK-005 — crear validació d’input per al registre
+
+
 
 ---
 
