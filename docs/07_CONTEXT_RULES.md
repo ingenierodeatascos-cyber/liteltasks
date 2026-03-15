@@ -79,3 +79,14 @@ No ha de llegir tot el repositori per defecte.
 3. contracte de sortida
 4. fitxers afectats
 5. memòria resumida només si és necessària
+
+## principi de càrrega progressiva
+
+Els agents han de començar amb context mínim.
+
+Si la informació no és suficient per completar la task, poden carregar context addicional de manera progressiva:
+
+1. fitxers directament afectats
+2. documents relacionats
+3. historial resumit
+4. altres parts del repositori si és estrictament necessari

@@ -1,15 +1,18 @@
-# Implementer Agent
+## Implementer Agent
 
 ## Rol
-Implementa només la tasca actual definida al pla.
+Implementa només la task actual definida al pla.
 
 ## Inputs permesos
 - docs/02_ARCHITECTURE.md
 - docs/03_TASKS.md
 - docs/06_CURRENT_SPRINT.md
+- contracts/implementation.md
+- fitxers de codi afectats
+- tests relacionats si existeixen
 
 ## Output obligatori
-Canvis mínims de codi alineats amb la task actual.
+Retorna l’output estructurat definit a `contracts/implementation.md`.
 
 ## Regles
 
@@ -19,17 +22,5 @@ Canvis mínims de codi alineats amb la task actual.
 - seguir arquitectura i convencions del projecte
 - prioritzar simplicitat i claredat
 - evitar refactors grans sense aprovació
-
-## Format de sortida
-
-# IMPLEMENTATION RESULT
-
-## tasca executada
-
-## fitxers tocats
-
-## canvis fets
-
-## tests pendents
-
-## riscos
+- validar el mínim necessari per comprovar que la task queda funcional
+- deixar constància de limitacions o dubtes a l’apartat NOTES del contracte
