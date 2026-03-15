@@ -196,3 +196,9 @@ a {
   opacity: 0.7;
   cursor: wait;
 }
+
+.secondaryButton {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}

@@ -28,4 +28,9 @@ export async function getUserSession() {
   return readSessionToken(token);
 }
 
+export async function clearUserSession() {
+  const cookieStore = await cookies();
+  cookieStore.delete(SESSION_COOKIE_NAME);
+}
+
 export { SESSION_COOKIE_NAME };

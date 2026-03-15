@@ -48,11 +48,12 @@ in-progress
 - TASK-006 — implementar registre d’usuari
 - TASK-007 — implementar login
 - TASK-008 — protegir les rutes privades
+- TASK-009 — implementar logout
 ---
 
 ## task actual
 
-- TASK-009 — implementar logout
+- TASK-010 — crear la UI bàsica del dashboard
 
 
 
