@@ -60,3 +60,10 @@ test("creates a readable signed session token", () => {
 
   assert.deepEqual(payload, { userId: 21 });
 });
+
+test("rejects a tampered session token", () => {
+  const token = createSessionToken({ userId: 21 });
+  const tamperedToken = `${token}tampered`;
+
+  assert.equal(readSessionToken(tamperedToken), null);
+});

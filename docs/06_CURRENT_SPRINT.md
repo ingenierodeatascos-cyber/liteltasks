@@ -47,11 +47,12 @@ in-progress
 - TASK-005 — crear validació d’input per al registre
 - TASK-006 — implementar registre d’usuari
 - TASK-007 — implementar login
+- TASK-008 — protegir les rutes privades
 ---
 
 ## task actual
 
-- TASK-008 — protegir les rutes privades
+- TASK-009 — implementar logout
 
 
 

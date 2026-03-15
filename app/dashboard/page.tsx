@@ -1,12 +1,21 @@
+import { redirect } from "next/navigation";
+
+import { getUserSession } from "@/features/auth/session";
 import { PlaceholderPage } from "@/lib/ui/placeholder-page";
 import { TasksEmptyState } from "@/features/tasks/ui/tasks-empty-state";
 
-export default function DashboardPage() {
+export default async function DashboardPage() {
+  const session = await getUserSession();
+
+  if (!session) {
+    redirect("/login");
+  }
+
   return (
     <PlaceholderPage
       eyebrow="Tasks module"
       title="Dashboard base disponible"
-      description="Aquesta vista és només una base tècnica. Encara no està protegida ni connectada a dades."
+      description="Aquesta vista és una base privada del producte. L'accés està restringit a usuaris amb sessió activa i encara no està connectada a dades."
     >
       <TasksEmptyState />
     </PlaceholderPage>
