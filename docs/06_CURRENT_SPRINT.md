@@ -37,9 +37,15 @@ in-progress
 
 ---
 
+## tasks completades en aquest sprint
+
+- TASK-001 — inicialitzar l’aplicació base
+- TASK-002 — configurar Prisma i SQLite
+---
+
 ## task actual
 
-TASK-001 — inicialitzar l’aplicació base
+- TASK-003 — definir el model User
 
 ---
 

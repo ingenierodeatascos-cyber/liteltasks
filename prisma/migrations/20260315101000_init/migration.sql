@@ -1,0 +1,4 @@
+-- CreateTable
+CREATE TABLE "PrismaBootstrap" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT
+);

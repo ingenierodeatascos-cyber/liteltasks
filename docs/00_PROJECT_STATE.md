@@ -1,50 +1,224 @@
 # PROJECT STATE
 
-## objectiu
-Crear una plantilla de projecte AI-first amb sistema d'agents, orquestrador i workflow estructurat per desenvolupar software amb IA.
+## nom del projecte
 
-## estat actual
-development
+LiteTasks
 
-## components implementats
+---
 
-- estructura base del repositori
-- sistema d'agents
-- orquestrador
-- prompts per executar agents
-- document CURRENT_SPRINT
+## objectiu del projecte
 
-## components pendents
+Construir un MVP d’una aplicació SaaS simple de control de tasques personals.
 
-- definir millor contracts d'output
-- completar prompts dels agents
-- millorar el router del sistema
-- definir arquitectura de referència
+L’objectiu funcional del producte és permetre que un usuari pugui:
 
-## stack
+- registrar-se
+- iniciar sessió
+- accedir a un dashboard privat
+- crear tasques
+- veure només les seves tasques
+- marcar-les com a completades o pendents
+- eliminar-les
 
-editor: VS Code  
-agent runtime: Codex  
-format: Markdown  
-control de versions: Git  
+A més del producte en si, el projecte també serveix com a entorn d’aprenentatge per treballar desenvolupament assistit amb IA de manera estructurada, controlada i pedagògica.
 
-## arquitectura del sistema
+---
 
-Orchestrator  
-↓  
-Agents  
-↓  
-State Files  
-↓  
-Code + Tests  
+## tipus de projecte
 
-## documents clau
+Projecte SaaS educatiu i escalable, construït amb un workflow AI-first.
 
-- ORCHESTRATOR.md
-- AGENTS.md
-- docs/00_PROJECT_STATE.md
-- docs/06_CURRENT_SPRINT.md
+El producte principal és l’aplicació LiteTasks.  
+El sistema d’agents, prompts i documents és el mètode de treball per construir-lo.
 
-## objectiu següent
+---
 
-Executar l'Explorer Agent per generar una exploració completa del projecte.
+## fase actual
+
+Fase de preparació de la base tècnica del MVP.
+
+En aquest moment:
+- la idea del producte està definida
+- l’arquitectura inicial està definida
+- el backlog inicial de tasks està definit
+- el sprint actual està centrat en preparar la base tècnica
+- la implementació funcional del producte encara no ha començat o està just començant
+
+---
+
+## estat actual resumit
+
+### ja implementat
+
+- estructura base del projecte
+- aplicació Next.js inicial operativa
+- scripts de desenvolupament funcionals
+- validació inicial de compilació i arrencada
+- base inicial de l'aplicació Next.js
+- estructura del projecte
+- configuració de Prisma
+- base de dades SQLite local
+- sistema de migracions inicial
+
+### ja definit
+- visió general del producte
+- especificació inicial del MVP
+- arquitectura inicial del sistema
+- estructura de treball basada en documents
+- backlog inicial de tasks
+- focus del sprint actual
+
+### pendent d’implementar
+- base real de l’aplicació
+- configuració de Prisma
+- configuració de SQLite
+- models User i Task
+- autenticació
+- dashboard privat
+- CRUD bàsic de tasques
+- tests mínims
+- refinament funcional del MVP
+
+---
+
+## producte definit actualment
+
+LiteTasks és una aplicació web de gestió de tasques personals amb autenticació.
+
+Característiques previstes del MVP:
+- registre d’usuari
+- login
+- logout
+- dashboard privat
+- creació de tasques
+- llistat de tasques pròpies
+- canvi d’estat de tasques
+- eliminació de tasques
+
+No formen part del MVP actual:
+- equips
+- col·laboració
+- etiquetes
+- prioritats
+- recordatoris
+- app mòbil
+- integracions externes
+
+---
+
+## stack previst
+
+### frontend
+- Next.js
+- React
+- TypeScript
+
+### backend
+- Next.js Route Handlers o Server Actions
+
+### persistència
+- Prisma
+- SQLite en desenvolupament local
+
+### autenticació
+- sistema basat en sessió
+- solució concreta pendent d’implementar
+
+### testing
+- validació manual del flux principal
+- tests mínims de validació i lògica crítica
+
+---
+
+## components principals previstos
+
+### producte
+- web app
+- auth module
+- tasks module
+- database layer
+
+### sistema de treball
+- Orchestrator
+- Agents
+- Prompts
+- Documents d’estat
+- Documents d’artefactes
+- Registre de decisions i testing
+
+---
+
+## documents clau actuals
+
+- `docs/01_SPEC.md`
+- `docs/02_ARCHITECTURE.md`
+- `docs/03_TASKS.md`
+- `docs/04_DECISIONS.md`
+- `docs/05_TESTING.md`
+- `docs/06_CURRENT_SPRINT.md`
+
+---
+
+## sprint actual
+
+El sprint actual està orientat a deixar preparada la base tècnica del projecte.
+
+Tasks actives:
+- TASK-001 — inicialitzar l’aplicació base
+- TASK-002 — configurar Prisma i SQLite
+- TASK-003 — definir el model User
+- TASK-004 — definir el model Task
+
+Task actual:
+- TASK-001 — inicialitzar l’aplicació base
+
+---
+
+## restriccions actuals
+
+- mantenir el MVP simple
+- no afegir funcionalitats fora d’abast
+- evitar sobredisseny
+- implementar una task cada vegada
+- mantenir coherència entre codi i documentació
+- fer servir la IA amb context limitat i objectius clars
+
+---
+
+## riscos actuals
+
+- voler implementar massa coses de cop
+- barrejar arquitectura i implementació sense focus
+- perdre control del context en prompts massa grans
+- desalinear documentació i estat real del codi
+- sobredissenyar abans de tenir un MVP funcional
+
+---
+
+## definició d’èxit de la fase actual
+
+Aquesta fase es considerarà ben completada quan:
+
+- el projecte arrenqui en local
+- Prisma estigui configurat
+- SQLite funcioni
+- el model User estigui definit
+- el model Task estigui definit
+- les migracions inicials funcionin
+- la documentació continuï reflectint l’estat real
+
+---
+
+## següent pas correcte
+
+Executar `TASK-001 — inicialitzar l’aplicació base` respectant:
+
+- `docs/01_SPEC.md`
+- `docs/02_ARCHITECTURE.md`
+- `docs/03_TASKS.md`
+- `docs/06_CURRENT_SPRINT.md`
+
+Després, continuar amb:
+- TASK-002
+- TASK-003
+- TASK-004
