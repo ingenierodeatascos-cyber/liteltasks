@@ -41,11 +41,12 @@ in-progress
 
 - TASK-001 — inicialitzar l’aplicació base
 - TASK-002 — configurar Prisma i SQLite
+- TASK-003 — definir el model User
 ---
 
 ## task actual
 
-- TASK-003 — definir el model User
+- TASK-004 — definir el model Task
 
 ---
 

@@ -59,6 +59,8 @@ En aquest moment:
 - configuració de Prisma
 - base de dades SQLite local
 - sistema de migracions inicial
+- model User definit
+- model Task definit amb relació a User
 
 ### ja definit
 - visió general del producte
@@ -70,9 +72,6 @@ En aquest moment:
 
 ### pendent d’implementar
 - base real de l’aplicació
-- configuració de Prisma
-- configuració de SQLite
-- models User i Task
 - autenticació
 - dashboard privat
 - CRUD bàsic de tasques
@@ -170,7 +169,7 @@ Tasks actives:
 - TASK-004 — definir el model Task
 
 Task actual:
-- TASK-001 — inicialitzar l’aplicació base
+- TASK-004 — definir el model Task
 
 ---
 
@@ -211,7 +210,7 @@ Aquesta fase es considerarà ben completada quan:
 
 ## següent pas correcte
 
-Executar `TASK-001 — inicialitzar l’aplicació base` respectant:
+Executar `TASK-004 — definir el model Task` respectant:
 
 - `docs/01_SPEC.md`
 - `docs/02_ARCHITECTURE.md`
@@ -219,6 +218,6 @@ Executar `TASK-001 — inicialitzar l’aplicació base` respectant:
 - `docs/06_CURRENT_SPRINT.md`
 
 Després, continuar amb:
-- TASK-002
-- TASK-003
-- TASK-004
+- TASK-005
+- TASK-006
+- TASK-007
