@@ -160,6 +160,24 @@ a {
   border-color: var(--accent);
 }
 
+.fieldTextarea {
+  width: 100%;
+  min-height: 132px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255, 250, 242, 0.92);
+  color: var(--text);
+  font: inherit;
+  resize: vertical;
+}
+
+.fieldTextarea:focus {
+  outline: 2px solid rgba(196, 98, 45, 0.24);
+  outline-offset: 2px;
+  border-color: var(--accent);
+}
+
 .fieldError,
 .formError,
 .formSuccess {
@@ -255,6 +273,18 @@ a {
   margin: 0;
 }
 
+.taskForm {
+  display: grid;
+  gap: 16px;
+}
+
+.taskFormHint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
 .tasksEmptyState {
   display: grid;
   gap: 8px;
@@ -268,4 +298,75 @@ a {
 .tasksEmptyState p {
   margin: 0;
   color: var(--muted);
+}
+
+.taskList {
+  display: grid;
+  gap: 12px;
+}
+
+.taskCard {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: rgba(255, 250, 242, 0.92);
+}
+
+.taskCardHeader {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.taskActions {
+  display: grid;
+  gap: 8px;
+  justify-items: end;
+}
+
+.taskCardHeader h3 {
+  margin: 0;
+}
+
+.taskCardHeader p {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.taskStatus {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(196, 98, 45, 0.14);
+  color: var(--accent-strong);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.taskStatus.done {
+  background: rgba(36, 92, 53, 0.14);
+  color: #245c35;
+}
+
+.taskMeta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.taskToggleButton {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text);
+  padding: 8px 12px;
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
 }

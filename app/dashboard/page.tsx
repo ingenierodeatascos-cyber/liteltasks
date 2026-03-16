@@ -2,7 +2,9 @@ import { redirect } from "next/navigation";
 
 import { getUserSession } from "@/features/auth/session";
 import { LogoutButton } from "@/features/auth/ui/logout-button";
-import { TasksEmptyState } from "@/features/tasks/ui/tasks-empty-state";
+import { listTasks } from "@/features/tasks/list-tasks";
+import { NewTaskForm } from "@/features/tasks/ui/new-task-form";
+import { TaskList } from "@/features/tasks/ui/task-list";
 import { AppShell } from "@/lib/ui/app-shell";
 
 export default async function DashboardPage() {
@@ -11,6 +13,8 @@ export default async function DashboardPage() {
   if (!session) {
     redirect("/login");
   }
+
+  const tasks = await listTasks(session.userId);
 
   return (
     <AppShell>
@@ -30,15 +34,12 @@ export default async function DashboardPage() {
         <section className="dashboardGrid">
           <section className="card dashboardPanel">
             <h2>New task form</h2>
-            <p>
-              This area is reserved for the task creation form that will be
-              implemented in the next tasks.
-            </p>
+            <NewTaskForm />
           </section>
 
           <section className="card dashboardPanel">
             <h2>Your task list</h2>
-            <TasksEmptyState />
+            <TaskList tasks={tasks} />
           </section>
         </section>
       </section>
