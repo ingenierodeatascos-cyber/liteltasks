@@ -30,11 +30,9 @@ in-progress
 
 ## tasks actives del sprint
 
-- TASK-008 — protegir les rutes privades
-- TASK-009 — implementar logout
-- TASK-010 — crear la UI bàsica del dashboard
-
-
+- TASK-011 — crear formulari de nova tasca
+- TASK-012 — implementar la creació de tasca
+- TASK-013 — implementar el llistat de tasques
 
 ---
 
@@ -54,7 +52,7 @@ in-progress
 
 ## task actual
 
-
+- TASK-011 — crear formulari de nova tasca
 
 
 
